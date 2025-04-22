@@ -1,0 +1,121 @@
+@import url(../colors.css);
+
+.header {
+  position: fixed;
+  display: flex;
+  background-image: linear-gradient(to left, #ff0033, #ff7575, #ff0033);
+  padding: 4px;
+  top: 0;
+  justify-content: center;
+
+  width: 100%;
+  z-index: 2;
+}
+.header img {
+  height: 68px;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 14%;
+  align-items: center;
+  height: 100svh;
+  justify-content: center;
+  gap: 40px;
+  background-color: var(--secondary);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.184);
+}
+.sidebar button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s;
+}
+.sidebar button img {
+  height: 60px;
+}
+/*linear-gradient(to bottom, #D10000, #FF2400, #FF1744)*/
+.sidebar button:hover {
+  scale: 1.2;
+  background-color: rgba(255, 0, 21, 0.555);
+  cursor: pointer;
+}
+.footer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 0;
+  background-color: var(--footer);
+  text-align: center;
+  width: 100%;
+  padding-top: 8px;
+}
+.footer h3,
+p {
+  color: aliceblue;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.footer h3 {
+  font-weight: 700;
+}
+/* Tablet view (between 600px and 900px) */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 20%;
+    gap: 30px;
+  }
+
+  .sidebar button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sidebar button img {
+    height: 50px;
+  }
+
+  .header img {
+    height: 60px;
+  }
+}
+
+/* Mobile view (less than 600px) */
+@media (max-width: 600px) {
+  .header {
+  }
+  .sidebar {
+    position: fixed;
+    flex-direction: row;
+
+    top: 70px;
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.184);
+    z-index: 3;
+  }
+
+  .sidebar button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sidebar button img {
+    height: 40px;
+  }
+
+  .footer {
+    padding-bottom: 100px; /* Add space for sidebar when fixed at bottom */
+  }
+}

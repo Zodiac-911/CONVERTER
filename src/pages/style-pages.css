@@ -1,0 +1,163 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-top: 20dvh;
+
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px 24px;
+  background-color: var(--secondary);
+  backdrop-filter: blur(8px);
+}
+.calculator button {
+  height: 60px;
+  width: 100%;
+  border-radius: 50%;
+  border: none;
+  font-size: 32px;
+  transition: all 0.3s;
+  color: var(--text);
+}
+.calculator button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 207, 212);
+}
+.calculator button:active {
+  font-size: 16px;
+}
+.calculator input {
+  height: 60px;
+  padding: 0 12px;
+  font-size: 24px;
+  width: 100%;
+  background-color: rgb(255, 207, 212);
+  padding: 20px;
+  border-radius: 16px;
+  border: none;
+  color: var(--text);
+}
+.calculator input:focus {
+  outline: none;
+}
+.btn-cnt {
+  width: 100%;
+}
+.result {
+  background-color: rgb(255, 207, 212);
+  padding: 20px;
+  border-radius: 16px;
+}
+.unitconvert {
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
+  margin: 0 auto;
+  margin-top: 20dvh;
+  gap: 12px;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px 24px;
+  background-color: var(--secondary);
+  backdrop-filter: blur(8px);
+}
+.unitconvert input,
+select,
+button {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+}
+.unitconvert div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.unitconvert input {
+  padding: 0 0 0 10px;
+}
+
+.unitconvert button {
+  transition: all 0.3s;
+  background-color: #ff9e9e;
+  color: aliceblue;
+}
+.unitconvert button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 207, 212);
+  color: black;
+}
+.convertmoney {
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
+  margin: 0 auto;
+  margin-top: 20dvh;
+  gap: 12px;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px 24px;
+  background-color: var(--secondary);
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+.convertmoney input {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 0 0 16px;
+}
+.convertmoney input:focus {
+  outline: none;
+}
+.convertmoney button {
+  transition: all 0.3s;
+  background-color: #ff9e9e;
+  color: aliceblue;
+}
+.convertmoney button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 207, 212);
+  color: black;
+}
+.tempconvert {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+
+  margin: 0 auto;
+  margin-top: 20dvh;
+  gap: 20px;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px 24px;
+  background-color: var(--secondary);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  color: aliceblue;
+}
+.tempconvert div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tempconvert input {
+  height: 40px;
+  width: 240px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 0 0 16px;
+  font-size: 16px;
+}
+.tempconvert input:focus {
+  outline: none;
+}
+@media (max-width: 600px) {
+  .unitconvert div {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

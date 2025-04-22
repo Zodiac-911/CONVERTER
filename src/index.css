@@ -1,0 +1,17 @@
+@font-face {
+  font-family: sniman;
+  src: url(./assets/Lexend-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sniman;
+}
+body {
+  background-image: url(./assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
