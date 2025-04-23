@@ -283,10 +283,16 @@ button {
   }
   .unitconvert {
     width: 300px;
+    margin-top: 160px;
   }
   .unitconvert div {
     flex-direction: column;
     gap: 20px;
+  }
+  .unitconvert input,
+  select,
+  button {
+    width: 100%;
   }
   .tempconvert input {
     width: 150px;
