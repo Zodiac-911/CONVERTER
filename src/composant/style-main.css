@@ -25,8 +25,13 @@
   justify-content: center;
   gap: 40px;
   background-color: var(--secondary);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.184);
+  color: aliceblue;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 24px 24px;
 }
 .sidebar button {
   width: 100px;
@@ -105,6 +110,9 @@ p {
     padding: 10px 0;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.184);
     z-index: 3;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+      0 10px 20px -5px rgba(0, 0, 0, 0.1),
+      inset 0 -5px 15px rgba(255, 255, 255, 0.5);
   }
 
   .sidebar button {
@@ -114,5 +122,14 @@ p {
 
   .sidebar button img {
     height: 40px;
+  }
+  .footer {
+    padding: 20px;
+    justify-content: center;
+    background-color: rgba(255, 117, 117, 0.702);
+  }
+  .footer h3 {
+    color: transparent;
+    font-size: 0px;
   }
 }
