@@ -91,7 +91,8 @@ p {
 
 /* Mobile view (less than 600px) */
 @media (max-width: 600px) {
-  .header {
+  .header img {
+    height: 32px;
   }
   .sidebar {
     position: fixed;
@@ -113,9 +114,5 @@ p {
 
   .sidebar button img {
     height: 40px;
-  }
-
-  .footer {
-    padding-bottom: 100px; /* Add space for sidebar when fixed at bottom */
   }
 }

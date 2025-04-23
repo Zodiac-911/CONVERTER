@@ -158,6 +158,7 @@ button:focus:not(:active)::after {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
     0 10px 20px -5px rgba(0, 0, 0, 0.1),
     inset 0 -5px 15px rgba(255, 255, 255, 0.5);
+  color: aliceblue;
 }
 .unitconvert input,
 select,
@@ -261,6 +262,34 @@ button {
 @media (max-width: 600px) {
   .calculator button {
     height: 32px;
+  }
+  .sidebar {
+    top: 44px;
+  }
+  .sidebar button:hover {
+    background-color: transparent;
+    scale: 1;
+  }
+  .sidebar button:active {
+    scale: 1.5;
+  }
+  .calculator {
+    margin-top: 100px;
+  }
+  .convertmoney,
+  .tempconvert {
+    margin-top: 200px;
+    width: 300px;
+  }
+  .unitconvert {
+    width: 300px;
+  }
+  .unitconvert div {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tempconvert input {
+    width: 150px;
   }
   .display {
     padding: 4px 8px 8px 4px;
