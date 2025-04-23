@@ -1,53 +1,147 @@
-.calculator {
+.calculator-container {
   display: flex;
-  flex-direction: column;
-  max-width: 320px;
-  margin: 0 auto;
-  margin-top: 20dvh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  border-radius: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 24px 24px;
+.calculator {
+  width: 320px;
   background-color: var(--secondary);
   backdrop-filter: blur(8px);
-}
-.calculator button {
-  height: 60px;
-  width: 100%;
-  border-radius: 50%;
-  border: none;
-  font-size: 32px;
-  transition: all 0.3s;
-  color: var(--text);
-}
-.calculator button:hover {
-  cursor: pointer;
-  background-color: rgb(255, 207, 212);
-}
-.calculator button:active {
-  font-size: 16px;
-}
-.calculator input {
-  height: 60px;
-  padding: 0 12px;
-  font-size: 24px;
-  width: 100%;
-  background-color: rgb(255, 207, 212);
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
   padding: 20px;
-  border-radius: 16px;
-  border: none;
-  color: var(--text);
 }
-.calculator input:focus {
+
+.display {
+  background: #ffebee;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  position: relative;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.memory-indicator {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.display-value {
+  font-size: 2.5rem;
+  color: #e91e63;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
+}
+
+button {
+  border: none;
   outline: none;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
 }
-.btn-cnt {
-  width: 100%;
+
+button:active {
+  transform: scale(0.95);
 }
-.result {
-  background-color: rgb(255, 207, 212);
-  padding: 20px;
-  border-radius: 16px;
+
+.btn-number {
+  background: #f8bbd0;
+  color: var(--primary);
+  box-shadow: 0 4px 0 #f48fb1;
+}
+
+.btn-number:hover {
+  background: #fce4ec;
+}
+
+.btn-operator,
+.btn-equals {
+  background: #ff6881;
+  color: white;
+  box-shadow: 0 4px 0 #b5486c;
+}
+
+.btn-operator:hover,
+.btn-equals:hover {
+  background: #f8bbd0;
+}
+
+.btn-function {
+  background: #fce4ec;
+  color: var(--primary);
+  box-shadow: 0 4px 0 #f8bbd0;
+}
+
+.btn-function:hover {
+  background: #fff;
+}
+
+.btn-memory {
+  background: var(--footer);
+  color: white;
+  box-shadow: 0 4px 0 #f05353;
+  font-size: 0.9rem;
+}
+
+.btn-memory:hover {
+  background: #ff9b9b;
+}
+
+.btn-equals {
+  grid-column: span 1;
+}
+
+/* Ripple effect */
+button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+button:focus:not(:active)::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
 }
 .unitconvert {
   display: flex;
@@ -61,6 +155,9 @@
   padding: 24px 24px;
   background-color: var(--secondary);
   backdrop-filter: blur(8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.5);
 }
 .unitconvert input,
 select,
@@ -103,6 +200,9 @@ button {
   background-color: var(--secondary);
   backdrop-filter: blur(8px);
   text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.5);
 }
 .convertmoney input {
   height: 40px;
@@ -138,6 +238,9 @@ button {
   backdrop-filter: blur(8px);
   text-align: center;
   color: aliceblue;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.5);
 }
 .tempconvert div {
   display: flex;
@@ -156,8 +259,14 @@ button {
   outline: none;
 }
 @media (max-width: 600px) {
-  .unitconvert div {
-    flex-direction: column;
-    gap: 12px;
+  .calculator button {
+    height: 32px;
+  }
+  .display {
+    padding: 4px 8px 8px 4px;
+  }
+  .display-value {
+    height: 20px;
+    font-size: 20px;
   }
 }
